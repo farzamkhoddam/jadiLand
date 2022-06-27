@@ -6,6 +6,7 @@ import { HTMLAttributes } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
+import macbookImg from '../../static/macbook-color.jpg';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -34,7 +35,7 @@ const BannerModule: React.FC<Props> = ({
         ) : (
           <Image
             className='banner__image'
-            src='/../../../static/macbook-color.jpg'
+            src={macbookImg}
             alt='Banner Image'
             layout='fill'
           />
