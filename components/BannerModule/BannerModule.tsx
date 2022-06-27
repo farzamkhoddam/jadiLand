@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { BannerModuleStyles } from './BannerModuleStyles';
-import Button from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 import { ReactNode } from 'react';
 import { HTMLAttributes } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
 import macbookImg from '../../static/macbook-color.jpg';
+import Button from '../HtmlButton/HtmlButton';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -57,7 +58,7 @@ const BannerModule: React.FC<Props> = ({
               </h2>
             )}
             <div className='banner__btns'>
-              {enquire && <Button text='Enquire Now' as={Link} to='/contact' />}
+              {enquire && <ButtonLink text='Enquire Now' href='/contact' />}
               <Button onClick={scrollToArea} text='Learn More' />
             </div>
           </div>

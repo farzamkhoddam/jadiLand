@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const ButtonStyles = styled.button`
+export const ButtonStyles = css`
   color: #fff;
   background-color: transparent;
   font-family: 'Heebo', sans-serif;
@@ -43,4 +43,8 @@ export const ButtonStyles = styled.button`
       }
     }
   }
+`;
+
+export const HtmlButton = styled.button`
+  ${ButtonStyles}
 `;
