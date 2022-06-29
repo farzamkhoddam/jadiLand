@@ -1,4 +1,4 @@
-import { ContentfulCourse } from "../Interfaces"
+import { ContentfulCourse } from "../Interfaces";
 
 export const allContentfulCourse: ContentfulCourse[] = [
   {
@@ -92,4 +92,4 @@ Vivamus odio urna, consequat a laoreet vel, vehicula non metus. Vestibulum ante 
       },
     ],
   },
-]
+];

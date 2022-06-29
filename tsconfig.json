@@ -20,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     "contexts/MenuContext.js",
-    "pages/_app.tsx"
+    "pages/_app.tsx",
+    "components/PerksModule/PerksModuleStyles.js"
   ],
   "exclude": ["node_modules"]
 }
