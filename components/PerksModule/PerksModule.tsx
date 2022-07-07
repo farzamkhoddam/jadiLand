@@ -1,7 +1,7 @@
 import * as React from "react";
-import staticImage from "../../static/abstract-building.jpg";
-import gatsbyImage from "../../static/logos/gatsby-logo.svg";
-import contentful from "../../static/logos/contentful-logo.svg";
+import staticImage from "../../public/static/abstract-building.jpg";
+import gatsbyImage from "../../public/static/logos/gatsby-logo.svg";
+import contentful from "../../public/static/logos/contentful-logo.svg";
 import { PerksModuleStyles } from "./PerksModuleStyles";
 import { MdOutlineClose as Cross } from "react-icons/md";
 import Perk from "./Perk";
