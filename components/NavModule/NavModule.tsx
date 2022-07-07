@@ -88,11 +88,11 @@ const NavModule = () => {
           {menuItems.map((item, index) => (
             <li key={index}>
               {/* navid activeClassName='menu__item--active' */}
-              <Link onClick={toggleNav} onKeyDown={toggleNav} href={item.path}>
-                <>
+              <Link onKeyDown={toggleNav} href={item.path}>
+                <div onClick={toggleNav}>
                   {item.text}
                   <span>.</span>
-                </>
+                </div>
               </Link>
             </li>
           ))}

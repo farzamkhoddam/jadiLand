@@ -3,7 +3,6 @@ import PostItems from './PostItems';
 import PostItem from './PostItem';
 import useLatestBlogPost from '../../hooks/useFeaturedCourses';
 import ButtonLink from '../ButtonLink/ButtonLink';
-import Link from 'next/link';
 
 const LatestPosts = ({ title, introduction }) => {
   const latestBlogPost = useLatestBlogPost();
