@@ -1,30 +1,30 @@
-import * as React from 'react';
-import ButtonLink from '../ButtonLink/ButtonLink';
-import { FeaturedCoursesStyles } from './FeaturesStyles';
-import FeaturedCourse from './FeaturedCourse';
-import useFeaturedCourses from '../../hooks/useFeaturedCourses';
+import * as React from "react";
+import ButtonLink from "../ButtonLink/ButtonLink";
+import { FeaturedCoursesStyles } from "./FeaturesStyles";
+import FeaturedCourse from "./FeaturedCourse";
+import useFeaturedCourses from "../../hooks/useFeaturedCourses";
 
 const Features = ({ title, introduction }) => {
   const featuredCourses = useFeaturedCourses();
 
   return (
-    <FeaturedCoursesStyles className='section'>
+    <FeaturedCoursesStyles className="section">
       {title || introduction ? (
-        <div className='container container__tight'>
-          <div className='intro__area'>
+        <div className="container container__tight">
+          <div className="intro__area">
             {title && <h2>{title}</h2>}
             {introduction && <p>{introduction}</p>}
           </div>
         </div>
       ) : null}
 
-      <div className='container container__tight container__scroll'>
-        {featuredCourses.map((node, index) => {
-          return <FeaturedCourse course={node} key={index} />;
-        })}
-      </div>
-      <div className='container container__tight learn__more'>
-        <ButtonLink href='/products' text='All Products' />
+      <div className="container container__tight container__scroll">
+          {featuredCourses.map((node, index) => {
+            return <FeaturedCourse course={node} key={index} />;
+          })}
+        </div>
+      <div className="container container__tight learn__more">
+        <ButtonLink href="/products" text="All Products" />
       </div>
     </FeaturedCoursesStyles>
   );
