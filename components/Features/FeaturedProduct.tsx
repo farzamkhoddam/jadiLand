@@ -1,5 +1,5 @@
 import * as React from "react";
-import Button from "../ButtonLink/ButtonLink";
+import Button from "../ButtonLink";
 import { FeaturedProductStyles } from "./FeaturesStyles";
 import Link from "next/link";
 import Image from "next/image";

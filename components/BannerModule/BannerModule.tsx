@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BannerModuleStyles } from "./BannerModuleStyles";
-import ButtonLink from "../ButtonLink/ButtonLink";
+import ButtonLink from "../ButtonLink";
 import { ReactNode } from "react";
 import { HTMLAttributes } from "react";
 import { useRouter } from "next/router";

@@ -2,7 +2,7 @@ import * as React from "react";
 import { FeaturedProductsStyles } from "./FeaturesStyles";
 import FeaturedProduct from "./FeaturedProduct";
 
-import Button from "../ButtonLink/ButtonLink";
+import Button from "../ButtonLink";
 import useFeaturedCourses from "../../hooks/useFeaturedCourses";
 
 const Features = ({ title, introduction }) => {

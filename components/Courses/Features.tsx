@@ -1,5 +1,5 @@
 import * as React from "react";
-import ButtonLink from "../ButtonLink/ButtonLink";
+import ButtonLink from "../ButtonLink";
 import { FeaturedCoursesStyles } from "./FeaturesStyles";
 import FeaturedCourse from "./FeaturedCourse";
 import useFeaturedCourses from "../../hooks/useFeaturedCourses";

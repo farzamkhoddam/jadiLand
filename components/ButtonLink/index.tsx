@@ -7,6 +7,7 @@ interface Props extends React.HTMLAttributes<HTMLLinkElement> {
   text: string;
   arrow?: boolean;
   href?: string | undefined;
+  as?: HTMLElement | unknown;
 }
 const ButtonLink: React.FC<Props> = ({ text, arrow, href }) => {
   return (

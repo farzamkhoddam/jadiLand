@@ -1,16 +1,26 @@
-import React from 'react';
-import PostItems from './PostItems';
-import PostItem from './PostItem';
-import useLatestBlogPost from '../../hooks/useFeaturedCourses';
-import ButtonLink from '../ButtonLink/ButtonLink';
+import React from "react";
+import PostItems from "./PostItems";
+import PostItem from "./PostItem";
+import useLatestBlogPost from "../../hooks/useFeaturedCourses";
+import ButtonLink from "../ButtonLink";
 
-const LatestPosts = ({ title, introduction }) => {
+interface Props {
+  title?: string;
+  introduction?: string;
+  HasAllNewsLink?: boolean;
+}
+
+const LatestPosts: React.FC<Props> = ({
+  title,
+  introduction,
+  HasAllNewsLink = true,
+}) => {
   const latestBlogPost = useLatestBlogPost();
   return (
-    <div className='section'>
-      <div className='container container__tight'>
+    <div className="section">
+      <div className="container container__tight">
         {title || introduction ? (
-          <div className='intro__area'>
+          <div className="intro__area">
             {title && (
               <h2>
                 {title}
@@ -26,9 +36,11 @@ const LatestPosts = ({ title, introduction }) => {
             return <PostItem key={index} node={node} />;
           })}
         </PostItems>
-        <div className='learn__more'>
-          <ButtonLink text='All News Items' href='/news' />
-        </div>
+        {HasAllNewsLink && (
+          <div className="learn__more">
+            <ButtonLink text="All News Items" href="/news" />
+          </div>
+        )}
       </div>
     </div>
   );
