@@ -5,16 +5,16 @@ import { ReactNode } from "react";
 import { HTMLAttributes } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Link from "next/link";
 import macbookImg from "../../public/static/macbook-color.jpg";
 import Button from "../HtmlButton/HtmlButton";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   title: string;
-  subTitle: string;
+  subTitle?: string;
   price?: string;
   enquire?: unknown;
   children?: ReactNode;
+  learnMore?: boolean;
 }
 const BannerModule: React.FC<Props> = ({
   children,
@@ -22,6 +22,7 @@ const BannerModule: React.FC<Props> = ({
   subTitle,
   price,
   enquire,
+  learnMore = true,
 }) => {
   const router = useRouter();
   function scrollToArea() {
@@ -59,7 +60,7 @@ const BannerModule: React.FC<Props> = ({
             )}
             <div className="banner__btns">
               {enquire && <ButtonLink text="Enquire Now" href="/contact" />}
-              <Button onClick={scrollToArea} text="Learn More" />
+              {learnMore && <Button onClick={scrollToArea} text="Learn More" />}
             </div>
           </div>
         </div>

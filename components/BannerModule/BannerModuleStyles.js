@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const BannerModuleStyles = styled.section`
-  height: 100vh;
+  height: 70vh;
   position: relative;
+  width: 100%;
   padding: 30px var(--borderSpacing);
 
   .container {

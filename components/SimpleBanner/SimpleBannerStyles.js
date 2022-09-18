@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SimpleBannerStyles = styled.section`
   height: 70vh;
@@ -19,6 +19,7 @@ export const SimpleBannerStyles = styled.section`
     left: 0;
     bottom: 0;
     right: 0;
+    width: 2px;
     z-index: 1;
   }
 

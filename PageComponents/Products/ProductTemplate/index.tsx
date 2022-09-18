@@ -21,40 +21,9 @@ const Producttemplate = (props) => {
   return (
     <>
       <Seo title={title} />
-      <BannerModule
-        title={title}
-        price={price}
-        subTitle={introduction}
-        enquire={true}
-      >
+      <BannerModule title={"Products"} enquire={false} learnMore={false}>
         <Image className="banner__image" src={imacKeyboard} alt={title} />
       </BannerModule>
-      <ProductTemplateStyles className="section">
-        <div className="container container__tight">
-          {description && (
-            <div className="column">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: description,
-                }}
-              ></div>
-            </div>
-          )}
-          {faqs && (
-            <div className="column">
-              {faqs.map((item, index) => {
-                return (
-                  <Faq
-                    key={index}
-                    title={item.question}
-                    description={item.answer}
-                  />
-                );
-              })}
-            </div>
-          )}
-        </div>
-      </ProductTemplateStyles>
       {gallery && (
         <div className="section">
           <div className="container container__tight">
